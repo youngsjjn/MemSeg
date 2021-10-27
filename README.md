@@ -46,7 +46,7 @@ sh tool/test.sh rugd deeplab50
 ```
 Inference "ResNet50 + Deeplabv3" with the memory module
 ```
-sh tool/test_mem.sh rugd deeplab50
+sh tool/test_mem.sh rugd deeplab50mem
 ```
 
 |  Network  |     mIoU     |
@@ -73,7 +73,7 @@ sh tool/train_mem.sh rugd deeplab50mem
 Here, the example is for training or testing on "ResNet50 + Deeplabv3".
 If you want to train other networks, please change "deeplab50" or "deeplab50mem" as a postfix of a config file name.
 
-For example, train "ResNet18 + PSPNet":
+For example, train "ResNet18 + PSPNet" with the memory module:
 ```
 sh tool/train_mem.sh rugd pspnet18mem
 ```
