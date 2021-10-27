@@ -78,7 +78,7 @@ sh tool/train_mem.sh rugd pspnet18mem
 
 ## Citation
 If you like our work and use the code or models for your research, please cite our work as follows.
-
+```
 @article{DBLP:journals/corr/abs-2108-05635,
   author    = {Youngsaeng Jin and
                David K. Han and
@@ -95,3 +95,4 @@ If you like our work and use the code or models for your research, please cite o
   biburl    = {https://dblp.org/rec/journals/corr/abs-2108-05635.bib},
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
+```
