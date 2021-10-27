@@ -53,10 +53,8 @@ sh tool/test_mem.sh rugd deeplab50mem
    | :-------: | :----------: |
    | ResNet18 + PSPNet  |    33.42    |
    | ResNet18 + PSPNet (Memory)  |    34.13   |
-   | :-------: | :----------: |
    | ResNet18 + Deeplabv3  |    33.48    |
    | ResNet18 + Deeplabv3 (Memory)  |    35.07   |
-   | :-------: | :----------: |
    | ResNet50 + Deeplabv3  |    36.77    |
    | ResNet50 + Deeplabv3 (Memory)  |    37.71   |
 
