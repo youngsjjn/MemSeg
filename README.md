@@ -33,7 +33,7 @@ pip install -r requirements.txt
 ```
 
 ### Implementation
-1. Download datasets (i.e. [RUGD](http://rugd.vision/)) and change the root of data path in [config](./config/cityscapes/cityscapes_transform101.yaml).
+1. Download datasets (i.e. [RUGD](http://rugd.vision/)) and change the root of data path in [config](./config/rugd/rugd_deeplab50.yaml).
 
 Download data list of RUGD [here](https://drive.google.com/drive/folders/1InS3ky3UHZOEj_GArLRuQUkZDFFhnbL4?usp=sharing).
 
