@@ -87,7 +87,6 @@ class SemData(Dataset):
         # image_path = '/home/ispl3/Documents/cityscapes/leftImg8bit/val/frankfurt/frankfurt_000001_014565_leftImg8bit.png'
         # label_path = '/home/ispl3/Documents/cityscapes/gtFine/val/munster/munster_000150_000019_gtFine_labelTrainIds.png'
         image_path, label_path = self.data_list[index]
-        # image_path = '/home/ispl3/PycharmProjects/pytorch/MemSeg/Wild_image/park-1_02671.png'
         image = cv2.imread(image_path, cv2.IMREAD_COLOR)  # BGR 3 channel ndarray wiht shape H * W * 3
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)  # convert cv2 read image from BGR order to RGB order
         image = np.float32(image)
