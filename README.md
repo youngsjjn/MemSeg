@@ -34,9 +34,11 @@ pip install -r requirements.txt
 
 ### Implementation
 1. Download datasets (i.e. [RUGD](http://rugd.vision/)) and change the root of data path in [config](./config/cityscapes/cityscapes_transform101.yaml).
-Download data list and pre-trained backbone models (ResNet50/101/152) [here](https://drive.google.com/open?id=15wx9vOM0euyizq-M1uINgN0_wjVRf9J3).
+Download data list of RUGD [here](https://drive.google.com/drive/folders/1InS3ky3UHZOEj_GArLRuQUkZDFFhnbL4?usp=sharing).
+Download pre-trained backbone models (ResNet50/101/152) [here](https://drive.google.com/open?id=15wx9vOM0euyizq-M1uINgN0_wjVRf9J3).
 
 2. Inference using pretrained model
+Download pretrained network in [my drive](https://drive.google.com/drive/folders/1EX9noJPgcWbuAxDy6XZnUNmApcNBlLIy?usp=sharing) and save them in `./exp/rugd/`.
 Inference "ResNet50 + Deeplabv3" without the memory module
 ```
 sh tool/test.sh rugd deeplab50
@@ -48,12 +50,12 @@ sh tool/test_mem.sh rugd deeplab50
 
 |  Network  |     mIoU     |
    | :-------: | :----------: |
-   | ResNet18 + PSPNet  |    33.42    |
-   | ResNet18 + PSPNet (Memory)  |    34.13   |
-   | ResNet18 + Deeplabv3  |    33.48    |
-   | ResNet18 + Deeplabv3 (Memory)  |    35.07   |
-   | ResNet50 + Deeplabv3  |    36.77    |
-   | ResNet50 + Deeplabv3 (Memory)  |    37.71   |
+   | ResNet18 + PSPNet  |    [33.42]    |
+   | ResNet18 + PSPNet (Memory)  |    [34.13]   |
+   | ResNet18 + Deeplabv3  |    [33.48]    |
+   | ResNet18 + Deeplabv3 (Memory)  |    [35.07]   |
+   | ResNet50 + Deeplabv3  |    [36.77]    |
+   | ResNet50 + Deeplabv3 (Memory)  |    [37.71]   |
 
 3. Train (Evaluation is included at the end of the training)
 Train "ResNet50 + Deeplabv3" without the memory module
