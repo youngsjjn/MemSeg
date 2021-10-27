@@ -59,7 +59,7 @@ sh tool/test_mem.sh rugd deeplab50mem
    | ResNet50 + Deeplabv3 (Memory)  |    37.71   |
 
 3. Train (Evaluation is included at the end of the training)
-Train "ResNet50 + Deeplabv3" without the memory module
+   Train "ResNet50 + Deeplabv3" without the memory module
 ```
 sh tool/train.sh rugd deeplab50
 ```
