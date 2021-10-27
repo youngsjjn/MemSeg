@@ -1,0 +1,67 @@
+DATA:
+  data_root: /data/path/RUGD
+  train_list: /data/path/RUGD/list/rugd_train.txt
+  val_list: /data/path/RUGD/list/rugd_val.txt
+  classes: 24
+
+TRAIN:
+  arch: deeplabv3mem
+  backbone: resnet
+  layers: 50
+  sync_bn: False  # adopt syncbn or not
+  train_h: 512
+  train_w: 512
+  scale_min: 0.5  # minimum random scale
+  scale_max: 2.0  # maximum random scale
+  rotate_min: -10  # minimum random rotate
+  rotate_max: 10  # maximum random rotate
+  zoom_factor: 8  # zoom factor for final prediction during training, be in [1, 2, 4, 8]
+  ignore_label: 255
+  aux_weight: 0.4
+  train_gpu: [0]
+  workers: 16  # data loader workers
+  batch_size: 8  # batch size for training
+  batch_size_val: 8  # batch size for validation during training, memory and speed tradeoff
+  base_lr: 0.01
+  epochs: 150
+  start_epoch: 0
+  output_stride: 8
+  power: 0.9
+  momentum: 0.9
+  weight_decay: 0.0001
+  manual_seed:
+  print_freq: 50
+  save_freq: 1
+  save_path: exp/rugd/deeplab50mem/model
+  weight:  # path to initial weight (default: none)
+  resume:  # path to latest checkpoint (default: none)
+  evaluate: False  # evaluate on validation set, extra gpu memory needed and small batch_size_val is recommend
+Distributed:
+  dist_url: tcp://127.0.0.1:6789
+  dist_backend: 'nccl'
+  multiprocessing_distributed: True
+  world_size: 1
+  rank: 0
+Memory:
+  mem_size: 24
+  separate_weight: 0.05
+  compact_weight: 0
+  mem_dim: 2048
+  mem_root: 
+
+TEST:
+  test_list: /data/path/RUGD/list/rugd_test.txt
+  split: val  # split in [train, val and test]
+  base_size: 688  # based size for scaling
+  test_h: 550
+  test_w: 688
+  scales: [1.0]  # evaluation scales, ms as [0.5, 0.75, 1.0, 1.25, 1.5, 1.75]
+  has_prediction: False  # has prediction already or not
+  index_start: 0  # evaluation start index in list
+  index_step: 0  # evaluation step index in list, 0 means to end
+  test_gpu: [0]
+  model_path: exp/rugd/deeplab50mem/model/train_epoch_150.pth  # evaluation model path
+  mitem_path: exp/rugd/deeplab50mem/model/memory_150.pt  # evaluation model path
+  save_folder: exp/rugd/deeplab50mem/result/epoch_150/val/ss  # results save folder
+  colors_path: data/rugd/rugd_colors.txt  # path of dataset colors
+  names_path: data/rugd/rugd_names.txt  # path of dataset category names
