@@ -16,7 +16,7 @@ Software: [PyTorch](https://pytorch.org/)>=1.0.0, python3
 ## Usage
 For installation, follow installation steps below or recommend you to refer to the instructions described [here](https://github.com/hszhao/semseg/blob/1.0.0/README.md).
 
-For its pretrained model, you can download from [my drive](https://drive.google.com/drive/folders/1rjQt5qr8CUbennohHjRjUaD68UIg_wGJ?usp=sharing).
+For its pretrained ResNet50 backbone model, you can download from [URL](https://drive.google.com/file/d/1w5pRmLJXvmQQA5PtCbHhZc_uC4o0YbmA/view?usp=sharing).
 
 ## Getting Started
 
